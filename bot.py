@@ -27,7 +27,6 @@ class BotGPT:
             text = response['choices'][0]['text']
             print("Usuário: " + msg.from_user.first_name + "\nPergunta: " + msg.text[5:] + "\nResposta: " + text + "\n\n")
         else:
-            error = "Desculpe, não consegui encontrar uma resposta para sua pergunta."
             print("Nenhum texto foi encontrado.")
 
         self._bot.reply_to(msg, text)
